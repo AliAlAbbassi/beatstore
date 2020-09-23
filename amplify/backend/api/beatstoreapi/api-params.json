@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/beatstore-api",
+            "lambdaFunction": "beatstoremain",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/beatstore-api"
+        }
+    ],
+    "resourceName": "beatstoreapi",
+    "apiName": "beatstoreapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "beatstoremain"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-beatstore-prod-175044-authRole",
+        "unAuthRoleName": "amplify-beatstore-prod-175044-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "beatstoremain",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
