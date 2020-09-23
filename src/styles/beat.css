@@ -1,0 +1,193 @@
+  * {
+    font-family: 'Open Sans', sans-serif;
+  }
+
+.beatName {
+    margin-left: 10px;
+    margin-top: 15px;
+    color: black;
+}
+.tagStyle {
+    margin-left: 20px;
+    border: 0.01rem solid;
+    padding: 0.1rem;
+}
+.genreHeader {
+    margin-left: 20px;
+    color: gray;
+}
+.genreStyle {
+    margin-left: 20px;
+    color: white;
+    background-color: rgb(0, 98, 204);
+}
+
+.bpmHeader {
+    margin-left: 20px;
+    color: gray;
+}
+
+.beatCover {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+.imageCrop {
+    max-width: 100px;
+}
+
+@media screen and (max-width: 1024px) {
+    .addToCartCartCart {
+        margin-top: -220px;
+        width: 40px;
+    }
+    .textMoneyStyle {
+        margin-top: 14px;
+    }
+    .beatNameWhite {
+        margin-left: 12px;
+        margin-top: 34px;
+    }
+    .beatCoverPhone {
+        width: 320px;
+        height: 320px;
+        object-fit: cover;
+        border-radius: 5%;
+    }
+    .beatNamePhone {
+        color: white;
+        font-size: 90px;
+        margin-left: 12px;
+    }
+    .tagStylePhone {
+        font-size: 40px;
+        color: white;
+        margin-left: 20px;
+    }
+    .genreHeaderPhone {
+        font-size: 50px;
+        color: white;
+        margin-left: 16px;
+    }
+    .genreStylePhone {
+        font-size: 30px;
+        color: white;
+        background-color: rgb(0, 98, 204);
+        margin-left: 20px;
+    }
+    .bpmHeaderPhone {
+        color: white;
+        font-size: 40px;
+        margin-left: 16px;
+    }
+    .bpmPhone {
+        font-size: 40px;
+        margin-left: 5px;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .bpmStyle {
+        margin-top: 4px;
+    }
+    .textMoneyStyle {
+        margin-top: 8.5px;
+    }
+    .addToCartCartCart {
+        margin-top: -232.5px;
+        width: 25px;
+    }
+    .beatNameWhite {
+        margin-left: 12px;
+        margin-top: 12px;
+        text-decoration: none;
+    }
+    .beatContainer {
+    margin-top: 10px;
+    width: 1024px;
+    margin-right: auto;
+    margin-left: auto;
+}
+    .buttonCartBeat {
+    height: 50px;
+    width: 100px;
+    margin-top: 10px;
+    background-color: rgb(255, 162, 0);
+}
+.beatName {
+    margin-left: 20px;
+    margin-top: 6px;
+    margin-bottom: 5px;
+    color: black;
+    font-size: x-large;
+}
+.tagStyle {
+    margin-left: 21px;
+    border: 0.01rem solid;
+    padding: 0.1rem;
+}
+.tagActualStyle {
+    font-size: 1.3rem;
+    margin-top: 14px;
+    margin-right: 5px;
+}
+ .buttonSM {
+        margin-right: 20px;
+        margin-left: 0px;
+        margin-top: -5px;
+        margin-bottom: -240px;
+    }
+} 
+
+@media screen and (max-width: 1024px) and (min-width: 700px) {
+.beatContainer {
+    margin-top: 10px;
+    width: 900px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.beatCover {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+.buttonCartBeat {
+    height: 80px;
+    width: 140px;
+    margin-top: 12px;
+    background-color: rgb(255, 162, 0);
+}
+.beatName {
+    margin-left: 15px;
+    margin-top: 35px;
+    color: black;
+}
+    .buttonSM {
+        margin-right: 0px;
+        margin-left: 85px;
+        margin-top: 10px;
+    }
+.tagStyles {
+    margin-left: 20px;
+    padding: 0.1rem;
+    margin-bottom: 40px;
+    margin-top: 4px;
+}
+.tagActualStyle {
+    font-size: 1.8rem;
+    margin-top: 30px;
+}
+}
+
+@media screen and (max-width: 1024px){
+.beatContainer {
+    margin-top: 10px;
+    margin-right: auto;
+    margin-left: auto;
+}
+    .buttonSM {
+        margin-bottom: -200px;
+    }
+}
