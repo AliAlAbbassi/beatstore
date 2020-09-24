@@ -19,7 +19,7 @@ import { returnErrors } from './errorActions'
 export const loadUser = () => (dispatch, getState) => {
     // User loading
     dispatch({ type: USER_LOADING })
-    axios.get('http://localhost:5000/beatstore/api/auth/me', tokenConfig(getState))
+    axios.get('https://4gh7fin9ub.execute-api.us-east-2.amazonaws.com/prod/beatstore/api/auth/me', tokenConfig(getState))
         .then(res => dispatch({ type: USER_LOADED, payload: res.data }))
         .catch(err => {
             dispatch(returnErrors(err.response.data.error, err.response.data.success))
@@ -43,7 +43,7 @@ export const register = ({ name, email, password }) => dispatch => {
     // Request body
     const body = JSON.stringify({ name, email, password })
 
-    axios.post('http://localhost:5000/beatstore/api/auth/register', body, config)
+    axios.post('https://4gh7fin9ub.execute-api.us-east-2.amazonaws.com/prod/beatstore/api/auth/register', body, config)
         .then(res => dispatch({
             type: REGISTER_SUCCESS,
             payload: res.data
@@ -69,7 +69,7 @@ export const login = ({ email, password }) => dispatch => {
     // Request body
     const body = JSON.stringify({ email, password })
 
-    axios.post('http://localhost:5000/beatstore/api/auth/login', body, config)
+    axios.post('https://4gh7fin9ub.execute-api.us-east-2.amazonaws.com/prod/beatstore/api/auth/login', body, config)
         .then(res => dispatch({
             type: LOGIN_SUCCESS,
             payload: res.data
@@ -104,7 +104,7 @@ export const updateCart = (cart) => (dispatch, getState) => {
     // Request body
     const body = JSON.stringify({ cart })
 
-    axios.put('http://localhost:5000/beatstore/api/auth/updateCart', body, tokenConfig(getState))
+    axios.put('https://4gh7fin9ub.execute-api.us-east-2.amazonaws.com/prod/beatstore/api/auth/updateCart', body, tokenConfig(getState))
         .then(res => dispatch({
             type: CART_UPDATED,
             payload: res.data
@@ -122,7 +122,7 @@ export const updateCart = (cart) => (dispatch, getState) => {
 export const updatePurchasedBeats = (beats) => (dispatch, getState) => {
     const body = JSON.stringify({ beats })
 
-    axios.put('http://localhost:5000/beatstore/api/auth/updatePurchasedBeats', body, tokenConfig(getState))
+    axios.put('https://4gh7fin9ub.execute-api.us-east-2.amazonaws.com/prod/beatstore/api/auth/updatePurchasedBeats', body, tokenConfig(getState))
         .then(res => dispatch({
             type: PURCHASED_BEATS_UPDATED,
             payload: res.data

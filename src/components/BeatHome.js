@@ -17,6 +17,7 @@ import { updateCart } from '../actions/authActions'
 import store from '../store'
 import { ModalBody, Modal, ModalFooter, Button } from 'react-bootstrap'
 import { urlState, mountState } from '../atoms'
+import { API } from 'aws-amplify'
 
 const BeatHome = ({ auth }) => {
     const [URL] = useRecoilState(urlState)
@@ -719,8 +720,8 @@ const RelatedBeats = () => {
 }
 
 const fetchBeat = async (id, URL) => {
-    const res = await fetch(`${URL}/beatstore/api/beats/${id}`)
-    return res.json()
+    const res = await API.get('beatstoreapi', `/beatstore/api/beats/${id}`)
+    return res
 }
 
 // const fetchBeats = async () => {
@@ -728,8 +729,8 @@ const fetchBeat = async (id, URL) => {
 //     return res.json()
 // }
 const fetchBeatsWLimit = async (limit, URL) => {
-    const res = await fetch(`${URL}/beatstore/api/beats/?limit=${limit}`)
-    return res.json()
+    const res = await API.get('beatstoreapi', `/beatstore/api/beats/?limit=${limit}`)
+    return res
 }
 
 const mapStateToProps = state => ({

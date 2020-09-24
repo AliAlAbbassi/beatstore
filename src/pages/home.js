@@ -91,7 +91,7 @@ const Home = ({ auth }) => {
 
 const fetchBeatsWLimit = async (limit, URL) => {
     const res = await API.get('beatstoreapi', `/beatstore/api/beats/?limit=${limit}`)
-    return res.json()
+    return res
 }
 
 const mapStateToProps = state => ({
