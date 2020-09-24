@@ -1,15 +1,23 @@
 {
-  "prod": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-beatstore-prod-175044-authRole",
-      "UnauthRoleArn": "arn:aws:iam::031208590194:role/amplify-beatstore-prod-175044-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::031208590194:role/amplify-beatstore-prod-175044-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-beatstore-prod-175044-deployment",
-      "UnauthRoleName": "amplify-beatstore-prod-175044-unauthRole",
-      "StackName": "amplify-beatstore-prod-175044",
-      "StackId": "arn:aws:cloudformation:us-east-2:031208590194:stack/amplify-beatstore-prod-175044/2bf266d0-fdac-11ea-b825-02ee530ea0b0",
-      "AmplifyAppId": "d1xl86rspxebsw"
+    "prod": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-beatstore-prod-175044-authRole",
+            "UnauthRoleArn": "arn:aws:iam::031208590194:role/amplify-beatstore-prod-175044-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::031208590194:role/amplify-beatstore-prod-175044-authRole",
+            "Region": "us-east-2",
+            "DeploymentBucketName": "amplify-beatstore-prod-175044-deployment",
+            "UnauthRoleName": "amplify-beatstore-prod-175044-unauthRole",
+            "StackName": "amplify-beatstore-prod-175044",
+            "StackId": "arn:aws:cloudformation:us-east-2:031208590194:stack/amplify-beatstore-prod-175044/2bf266d0-fdac-11ea-b825-02ee530ea0b0",
+            "AmplifyAppId": "d1xl86rspxebsw"
+        },
+        "categories": {
+            "hosting": {
+                "amplifyhosting": {
+                    "appId": "d1xl86rspxebsw",
+                    "type": "cicd"
+                }
+            }
+        }
     }
-  }
 }
