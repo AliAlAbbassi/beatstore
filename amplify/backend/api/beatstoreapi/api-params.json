@@ -1,12 +1,11 @@
 {
     "paths": [
         {
-            "name": "/beatstore-api",
+            "name": "/beatstore",
             "lambdaFunction": "beatstoremain",
             "privacy": {
                 "open": true
-            },
-            "policyResourceName": "/beatstore-api"
+            }
         }
     ],
     "resourceName": "beatstoreapi",
@@ -31,5 +30,6 @@
                 "Arn"
             ]
         }
-    ]
+    ],
+    "uuid": "61772e52"
 }

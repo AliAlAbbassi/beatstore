@@ -6,7 +6,10 @@ import { termState } from '../atoms'
 import lunr from 'lunr'
 import { urlState } from '../atoms'
 import Footer from '../components/Footer'
-import { API } from 'aws-amplify'
+import Amplify, { API } from 'aws-amplify'
+import awsExports from '../aws-exports'
+
+Amplify.configure(awsExports)
 
 const Beatstore = () => {
     const [term, setTerm] = useRecoilState(termState)

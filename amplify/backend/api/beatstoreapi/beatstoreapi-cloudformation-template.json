@@ -90,7 +90,7 @@
             ],
             "paths": {
               
-              "/beatstore-api": {
+              "/beatstore": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -189,7 +189,7 @@
                   }
                 }
               },
-              "/beatstore-api/{proxy+}": {
+              "/beatstore/{proxy+}": {
                 "options": {
                   "consumes": [
                     "application/json"
@@ -367,7 +367,7 @@
         
         
         
-      "DeploymentAPIGWbeatstoreapi": {
+      "DeploymentAPIGWbeatstoreapi61772e52": {
         "Type": "AWS::ApiGateway::Deployment",
         "Properties": {
           "Description": "The Development stage deployment of your API.",

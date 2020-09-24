@@ -24,8 +24,13 @@ const bodyParser = require('body-parser')
 // Load env vars
 dotenv.config({ path: './config/config.env' })
 
+// Route files
+const auth = require('./routes/auth')
+const users = require('./routes/users')
+const beats = require('./routes/beats')
+
 // declare a new express app
-var app = express()
+const app = express()
 
 // Body parser
 app.use(express.json())
@@ -36,10 +41,6 @@ app.use(awsServerlessExpressMiddleware.eventContext())
 // Connect to db
 connectDB()
 
-// Route files
-const auth = require('./routes/auth')
-const users = require('./routes/users')
-const beats = require('./routes/beats')
 
 // Enable CORS for all methods
 // app.use(function (req, res, next) {
@@ -93,21 +94,19 @@ app.use('/beatstore/api/beats', beats)
 app.use(errorHandler)
 
 
-
-
 /**********************
  * Example get method *
  **********************/
 
-app.get('/beatstore-api', function (req, res) {
-  // Add your code here
-  res.json({ success: 'get call succeed!', url: req.url });
-});
+// app.get('/beatstore-api', function (req, res) {
+//   // Add your code here
+//   res.json({ success: 'get call succeed!', url: req.url });
+// });
 
-app.get('/beatstore-api/*', function (req, res) {
-  // Add your code here
-  res.json({ success: 'get call succeed!', url: req.url });
-});
+// app.get('/beatstore-api/*', function (req, res) {
+//   // Add your code here
+//   res.json({ success: 'get call succeed!', url: req.url });
+// });
 
 
 const PORT = process.env.PORT || 5000
