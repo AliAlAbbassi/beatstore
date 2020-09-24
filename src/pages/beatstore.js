@@ -105,7 +105,7 @@ const Beatstore = () => {
 }
 
 const fetchBeats = async (URL) => {
-    const res = await API.get(`/beatstore/api/beats`)
+    const res = await API.get('beatstoreapi', `/beatstore/api/beats`)
     return res.json()
 }
 
