@@ -17,7 +17,8 @@ const Beatstore = () => {
     const {
         status,
         data,
-        error
+        error,
+        isLoading
     } = useInfiniteQuery(URL, fetchBeats, {
         getFetchMore: (lastGroup, allGroups) => lastGroup.nextCursor,
     })
@@ -99,7 +100,7 @@ const Beatstore = () => {
                     </div>
                 </section>
             </div>
-            <Store beats={beats} status={status} error={error} />
+            <Store beats={beats} status={status} error={error} isLoading={isLoading} />
         </div>
     )
 }

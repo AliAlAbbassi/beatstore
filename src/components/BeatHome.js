@@ -18,6 +18,20 @@ import store from '../store'
 import { ModalBody, Modal, ModalFooter, Button } from 'react-bootstrap'
 import { urlState, mountState } from '../atoms'
 import { API } from 'aws-amplify'
+import { css } from "@emotion/core";
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+const overrideLg = css`
+  display: block;
+  margin-top: 250px;
+  margin-left: 600px;
+`;
+
+const override = css`
+    display: block;
+    margin-top: 500px;
+    margin-left: 400px;
+`;
 
 const BeatHome = ({ auth }) => {
     const [URL] = useRecoilState(urlState)
@@ -141,9 +155,23 @@ const BeatHome = ({ auth }) => {
 
     const handleCloseBg = () => setShowModelBg(false)
 
-    if (isLoading) {
+    if (isLoading && matches) {
         return (
-            <div className='text-white text-6xl mt-64 text-center'>Loading Beats...</div>
+            <PacmanLoader
+                css={overrideLg}
+                size={90}
+                color={"#ffffff"}
+                loading={isLoading}
+            />
+        )
+    } else if (!matches && isLoading) {
+        return (
+            <PacmanLoader
+                css={override}
+                size={100}
+                color={"#ffffff"}
+                loading={isLoading}
+            />
         )
     }
 

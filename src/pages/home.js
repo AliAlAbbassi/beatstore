@@ -17,7 +17,7 @@ const Home = ({ auth }) => {
     // const setMount = useSetRecoilState(mountState)
     const [limit] = useState(10)
     const [URL] = useRecoilState(urlState)
-    const { data, status } = useQuery([limit, URL], fetchBeatsWLimit)
+    const { data, status, isLoading } = useQuery([limit, URL], fetchBeatsWLimit)
     const [beats, setBeats] = useState([])
     const [term, setTerm] = useRecoilState(termState)
 
@@ -68,7 +68,7 @@ const Home = ({ auth }) => {
             <div className='storeContainer'>
                 <h1 style={{ color: 'white' }} className=' text-6xl lg:text-3xl font-semibold font-body text-center mt-20 lg:mt-16'>BEATS</h1>
                 {beats && (
-                    <Store beats={beats} status={status} />
+                    <Store beats={beats} status={status} isLoading={isLoading} />
                 )}
             </div>
             <div className='grid justify-center'>

@@ -5,9 +5,23 @@ import { useRecoilState, useSetRecoilState } from 'recoil';
 import ReactJkMusicPlayer from "react-jinke-music-player";
 import "react-jinke-music-player/assets/index.css";
 import { connect } from 'react-redux'
+import { css } from "@emotion/core";
+import PacmanLoader from "react-spinners/PacmanLoader";
+
+const overrideLg = css`
+  display: block;
+  margin-top: 100px;
+  margin-left: 670px;
+`;
+
+const override = css`
+    display: block;
+    margin-top: 200px;
+    margin-left: 400px;
+`;
 
 
-const Store = ({ auth, beats, status, error }) => {
+const Store = ({ auth, beats, status, error, isLoading }) => {
     // const { beats, latestbeats, status } = usePaginatedQuery(['beats', page], fetchBeats)
     const selectedTrack = useRecoilState(selectedTrackState)
     const [unmount] = useRecoilState(mountState)
@@ -56,7 +70,24 @@ const Store = ({ auth, beats, status, error }) => {
     return (
         <div>
             {status === 'loading' && (
-                <div style={{ marginTop: '100px', color: 'white' }} className='text-center text-white text-4xl'>Loading beats...</div>
+                <div>
+                    <div className='hidden lg:block'>
+                        <PacmanLoader
+                            css={overrideLg}
+                            size={60}
+                            color={"#ffffff"}
+                            loading={isLoading}
+                        />
+                    </div>
+                    <div className='block lg:hidden'>
+                        <PacmanLoader
+                            css={override}
+                            size={60}
+                            color={"#ffffff"}
+                            loading={isLoading}
+                        />
+                    </div>
+                </div>
             )}
 
             {status === 'error' && (
