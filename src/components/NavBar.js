@@ -6,6 +6,7 @@ import Transition from './Transition'
 import CartModel from './CartModel'
 import { useRecoilState } from 'recoil'
 import { isCartModelOpen, cartBeatState } from '../atoms'
+import useMediaQuery from '@material-ui/core/useMediaQuery'
 
 const NavBar = ({ auth }) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -13,6 +14,8 @@ const NavBar = ({ auth }) => {
     const [cart] = useRecoilState(cartBeatState)
     const [navStyle, setNavStyle] = useState('mt-5 text-2xl ml-4')
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [navLogoFontSize, setNavLogoFontSize] = useState(0)
+    const matches = useMediaQuery('(min-width:1024px)')
 
     useEffect(() => {
         if (isMenuOpen) {
@@ -22,19 +25,23 @@ const NavBar = ({ auth }) => {
         }
     }, [isMenuOpen])
 
+    useEffect(() => {
+        if (matches) {
+            setNavLogoFontSize(18)
+        } else {
+            setNavLogoFontSize(40)
+        }
+    }, [matches])
+
     return (
         <div>
             <nav style={{ backgroundColor: 'rgb(53, 47, 53)' }} className="navBAR">
-                <div className="flex flex-no-shrink items-stretch h-0 justify-between">
+                <div className="flex flex-no-shrink items-stretch h-12 lg:h-0 justify-between" >
                     <div
+                        style={{ marginTop: '-25px' }}
                         className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark text-2xl hover:no-underline">
                         <Link to='/' className='text-white no-underline hover:no-underline'>
-                            <svg xmlns="http://www.w3.org/2000/svg" width={500} height={200} viewBox="0 0 500 200">
-                                <defs>
-                                    <style dangerouslySetInnerHTML={{ __html: "\n      .cls-1 {\n        font-size: 20px;\n        fill: #fff;\n        font-family: Bugfast;\n      }\n    " }} />
-                                </defs>
-                                <text id="CUTHLEHOOP" className="cls-1" transform="translate(0 122.661) scale(1.346)">CUTHLEHOOP</text>
-                            </svg>
+                            <img src='/CUTHLEHOOP_LOGO_WHITE.png' className='mt-12' />
                         </Link>
                     </div>
                     <div className="flex lg:hidden cursor-pointer relative lg:w-12 lg:h-12 w-20 h-20 p-4 mr-10" style={{ marginTop: '-20px' }}>
