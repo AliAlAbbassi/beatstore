@@ -95,14 +95,14 @@ app.use('/beatstore/api/beats', beats)
 app.use(errorHandler)
 
 // Compression
-app.use(compression({ filter: shouldCompress }))
+app.use(compression())
 
-const shouldCompress = (req, res) => {
-  if (req.headers['x-no-compression']) {
-    return false
-  }
-  return compression.filter(req, res)
-}
+// const shouldCompress = (req, res) => {
+//   if (req.headers['x-no-compression']) {
+//     return false
+//   }
+//   return compression.filter(req, res)
+// }
 
 /**********************
  * Example get method *
