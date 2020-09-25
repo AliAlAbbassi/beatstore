@@ -5,6 +5,7 @@ import history from '../history'
 import { Alert } from 'react-bootstrap'
 import { clearErrors } from '../actions/errorActions'
 import { useForm } from 'react-hook-form'
+import { Link } from 'react-router-dom'
 
 const Login = ({ auth, error, login, clearErrors }) => {
     const [email, setEmail] = useState('')
@@ -81,7 +82,7 @@ const Login = ({ auth, error, login, clearErrors }) => {
                 </div> */}
                 <button
                     type="submit"
-                    className="btn btn-primary text-4xl lg:text-xl"
+                    className="btn btn-primary text-4xl lg:text-xl hover:underline"
                     onClick={(e) => {
                         e.preventDefault()
                         login({ email, password })
@@ -92,11 +93,11 @@ const Login = ({ auth, error, login, clearErrors }) => {
                 >
                     Submit
           </button>
-                <button type="submit" className="btn btn-secondary text-4xl lg:text-xl" style={{ marginLeft: '10px' }} onClick={() => {
-                    history.push('/')
-                }}>
-                    Register
-          </button>
+                <button type="submit" className="btn btn-secondary text-4xl lg:text-xl" style={{ marginLeft: '10px' }}>
+                    <Link to='/register' className='hover:text-white'>
+                        Register
+                    </Link>
+                </button>
             </form >
         </div >
     )

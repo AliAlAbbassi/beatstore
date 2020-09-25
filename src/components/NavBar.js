@@ -25,10 +25,17 @@ const NavBar = ({ auth }) => {
     return (
         <div>
             <nav style={{ backgroundColor: 'rgb(53, 47, 53)' }} className="navBAR">
-                <div className="flex flex-no-shrink items-stretch h-12 justify-between">
+                <div className="flex flex-no-shrink items-stretch h-0 justify-between">
                     <div
                         className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark text-2xl hover:no-underline">
-                        <Link to='/' className='text-white no-underline hover:no-underline text-6xl mt-10 lg:mt-0 lg:text-xl'>CUTHLEHOOP</Link>
+                        <Link to='/' className='text-white no-underline hover:no-underline'>
+                            <svg xmlns="http://www.w3.org/2000/svg" width={500} height={200} viewBox="0 0 500 200">
+                                <defs>
+                                    <style dangerouslySetInnerHTML={{ __html: "\n      .cls-1 {\n        font-size: 20px;\n        fill: #fff;\n        font-family: Bugfast;\n      }\n    " }} />
+                                </defs>
+                                <text id="CUTHLEHOOP" className="cls-1" transform="translate(0 122.661) scale(1.346)">CUTHLEHOOP</text>
+                            </svg>
+                        </Link>
                     </div>
                     <div className="flex lg:hidden cursor-pointer relative lg:w-12 lg:h-12 w-20 h-20 p-4 mr-10" style={{ marginTop: '-20px' }}>
                         {cart && (

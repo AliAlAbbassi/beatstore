@@ -20,6 +20,7 @@ const hpp = require('hpp')
 const errorHandler = require('./middleware/error')
 const connectDB = require('./config/db')
 const bodyParser = require('body-parser')
+const compression = require('compression')
 
 // Load env vars
 dotenv.config({ path: './config/config.env' })
@@ -93,6 +94,15 @@ app.use('/beatstore/api/beats', beats)
 
 app.use(errorHandler)
 
+// Compression
+app.use(compression({ filter: shouldCompress }))
+
+const shouldCompress = (req, res) => {
+  if (req.headers['x-no-compression']) {
+    return false
+  }
+  return compression.filter(req, res)
+}
 
 /**********************
  * Example get method *
