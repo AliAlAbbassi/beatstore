@@ -41,7 +41,7 @@ const NavBar = ({ auth }) => {
                         style={{ marginTop: '-25px' }}
                         className="flex-no-grow flex-no-shrink relative py-2 px-4 leading-normal text-white no-underline flex items-center hover:bg-grey-dark text-2xl hover:no-underline">
                         <Link to='/' className='text-white no-underline hover:no-underline'>
-                            <img src='/CUTHLEHOOP_LOGO_WHITE.png' className='mt-12 block lg:hidden' />
+                            <img src='/CUTHLEHOOP_LOGO_WHITE.png' className='block lg:hidden' style={{ marginTop: '60px' }} />
                             <img src='/CUTHLEHOOP_LOGO_SMALL_SIZE_WHITE.png' className='hidden lg:block' style={{ marginTop: '70px' }} />
                         </Link>
                     </div>
