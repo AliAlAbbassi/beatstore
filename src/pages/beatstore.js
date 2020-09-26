@@ -94,8 +94,8 @@ const Beatstore = () => {
             <h1 style={{ color: 'white' }} className='text-6xl lg:text-3xl font-semibold text-center mt-20 lg:mt-16'>BEATS</h1>
             <div className='grid justify-center'>
                 <section className="" style={{ width: '800px' }}>
-                    <div className="container mx-auto py-8">
-                        <input value={term} onChange={handleSearchChange} className="w-full h-16 rounded mb-8 focus:outline-none focus:shadow-outline text-xl px-8 shadow-lg text-black text-center" type="search" placeholder="What type of track are you looking for?">
+                    <div className="mx-auto pt-4">
+                        <input value={term} onChange={handleSearchChange} className="trackSearch w-full rounded focus:outline-none focus:shadow-outline text-4xl lg:text-xl shadow-lg text-black text-center" type="search" placeholder="What type of track are you looking for?">
                         </input>
                     </div>
                 </section>
