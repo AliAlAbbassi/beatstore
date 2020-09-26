@@ -12,12 +12,14 @@ const overrideLg = css`
   display: block;
   margin-top: 100px;
   margin-left: 670px;
+  margin-bottom: 50px;
 `;
 
 const override = css`
     display: block;
     margin-top: 200px;
     margin-left: 400px;
+    margin-bottom: 90px;
 `;
 
 

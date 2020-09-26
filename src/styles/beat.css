@@ -40,12 +40,11 @@
 
 @media screen and (max-width: 1024px) {
     .addToCartCartCart {
-        margin-top: -220px;
-        padding-top: -50px;
         width: 40px;
+        height: 40px;
+        margin-top: 1.2px;
     }
     .textMoneyStyle {
-        margin-top: 14px;
     }
     .beatNameWhite {
         margin-left: 12px;
@@ -139,11 +138,11 @@
         margin-top: 4px;
     }
     .textMoneyStyle {
-        margin-top: 8.5px;
     }
     .addToCartCartCart {
-        margin-top: -232.5px;
         width: 25px;
+        height: 25px;
+        margin-top: 1.5px;
     }
     .beatNameWhite {
         margin-left: 12px;

@@ -23,12 +23,13 @@
 }
 .addToCartLogo {
     width: 70px;
-    margin-top: -208px;
-    margin-left: auto
+    height: 70px;
+    margin-top: 10px;
+    margin-left: 52px;
 }
 .moneyTextStyle {
     font-size: 58px;
-    margin-top: 7px;
+    text-align: center;
 }
 
 .play {
@@ -67,7 +68,9 @@
     }
     .addToCartLogo {
         width: 25px;
-        margin-top: -237.5px;
+        height: 25px;
+        margin-top: 7px;
+        margin-right: 1px;
         margin-left: 27px;
     }
     .addToCartBtn {
@@ -78,7 +81,7 @@
         height: 40px;
     }
     .moneyTextStyle {
-        margin-top: 1.5px;
+        margin-top: 3px;
         font-size: 22px;
     }
     .download {

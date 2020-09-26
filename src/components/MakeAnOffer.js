@@ -106,16 +106,16 @@ const MakeAnOffer = ({ location }) => {
         )
     }
     return (
-        <form onSubmit={handleSubmit(onSubmit)} className='grid w-3/4 m-auto'>
+        <form onSubmit={handleSubmit(onSubmit)} className='grid w-10/12 m-auto'>
             <p className='text-white text-6xl mt-64 text-left'>Create a New Offer</p>
             <div className='mt-5 flex'>
-                <img src={beat.cover} className='object-cover cursor-pointer w-48 h-48 rounded' alt='beat cover' />
+                <img src={beat.cover} className='object-cover cursor-pointer w-48 h-48 rounded-lg' alt='beat cover' />
                 <p className='text-white text-5xl ml-3 mt-5'>{beat.name}</p>
             </div>
             <div>
-                <p className='text-white text-4xl mt-5'>SELECT A LICENSE</p>
-                <div className="inline-block relative text-white">
-                    <select name='license' ref={register({ required: true })} className="block appearance-none w-full bg-black bg-opacity-75 border border-gray-400 hover:border-gray-500 text-3xl pb-4 pt-4 px-2 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                <p className='text-white text-5xl mt-5 mb-2'>SELECT A LICENSE</p>
+                <div className="inline-block relative text-white w-full">
+                    <select name='license' ref={register({ required: true })} className="block appearance-none w-full bg-black bg-opacity-75 border border-gray-400 hover:border-gray-500 text-4xl pb-4 pt-4 px-2 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                         <option value='Exclusive'>Exclusive (MP3, WAV and TRACK STEMS)</option>
                         <option value='Unlimited'>Unlimited Lease (MP3, WAV and TRACK STEMS)</option>
                         <option value='WAV Trackouts'>WAV Trackouts Lease (MP3, WAV and TRACK STEMS)</option>
@@ -128,9 +128,9 @@ const MakeAnOffer = ({ location }) => {
                 </div>
             </div>
             <div>
-                <p className='text-white text-4xl mt-5'>PUBLISHING PERCENT</p>
+                <p className='text-white text-5xl mt-5'>PUBLISHING PERCENT</p>
                 <div className="inline-block relative w-full">
-                    <select name='publishing' ref={register({ required: true })} className="block appearance-none text-white text-3xl w-full bg-black bg-opacity-75 border border-gray-400 hover:border-gray-500 px-2 pt-3 pb-3 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                    <select name='publishing' ref={register({ required: true })} className="block appearance-none text-white text-4xl w-full bg-black bg-opacity-75 border border-gray-400 hover:border-gray-500 px-2 pt-4 pb-4 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                         <option value='50'>Default 50%</option>
                         <option value='100'>100%</option>
                         <option value='95'>95%</option>
@@ -162,9 +162,9 @@ const MakeAnOffer = ({ location }) => {
 
             <div className='border rounded mt-5'>
                 <div className='m-3'>
-                    <p className='text-4xl text-white'>AUTO-EXPIRE THIS OFFER</p>
+                    <p className='text-5xl text-white'>AUTO-EXPIRE THIS OFFER</p>
                     <div className="inline-block relative w-full">
-                        <select name='expireDate' ref={register({ required: true })} className="block appearance-none w-full text-3xl text-white bg-black bg-opacity-75 border border-gray-400 hover:border-gray-500 px-4 pt-3 pb-3 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
+                        <select name='expireDate' ref={register({ required: true })} className="block appearance-none w-full text-4xl text-white bg-black bg-opacity-75 border border-gray-400 hover:border-gray-500 px-4 pt-4 pb-4 rounded shadow leading-tight focus:outline-none focus:shadow-outline">
                             <option value='3'>3 Days from Today</option>
                             <option value='7'>7 Days from Today</option>
                             <option value='14'>14 Days from Today</option>
@@ -175,11 +175,11 @@ const MakeAnOffer = ({ location }) => {
                         </div>
                     </div>
 
-                    <p className='text-4xl text-white mt-3'>OFFER AMOUNT</p>
+                    <p className='text-5xl text-white mt-3 mb-2'>OFFER AMOUNT</p>
                     <input name='offerAmount' ref={register({ min: 200 })} className='shadow appearance-none border rounded text-4xl w-full text-black mb-2 leading-tight focus:outline-none focus:shadow-outline pb-3 pt-3' />
                     <div className='grid justify-center'>
                         <p className='text-2xl text-white'>Required minimum offer amount is $200.00</p>
-                        <button type='submit' className='buttonSendOffer text-black hover:text-black text-center text-3xl w-3/4 pt-2 pb-2'>SEND OFFER</button>
+                        <button type='submit' className='buttonSendOffer text-black hover:text-black text-center text-5xl w-3/4 pt-2 pb-2'>SEND OFFER</button>
                     </div>
                 </div>
             </div>
