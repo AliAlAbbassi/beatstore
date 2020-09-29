@@ -23,7 +23,7 @@ const override = css`
 `;
 
 
-const Store = ({ auth, beats, status, error, isLoading }) => {
+const Store = ({ auth, beats, status, error, isLoading, autoPlayState }) => {
     // const { beats, latestbeats, status } = usePaginatedQuery(['beats', page], fetchBeats)
     const selectedTrack = useRecoilState(selectedTrackState)
     const [unmount] = useRecoilState(mountState)
@@ -35,7 +35,7 @@ const Store = ({ auth, beats, status, error, isLoading }) => {
         locale: 'en_US',
         defaultPosition: { bottom: 0, left: 0 },
         mode: 'full',
-        autoPlay: false,
+        autoPlay: autoPlayState || true,
         playIndex: 0,
         responsive: false,
         showDownload: false
@@ -49,7 +49,7 @@ const Store = ({ auth, beats, status, error, isLoading }) => {
                 newOptions.audioLists.push({
                     name: beat.name,
                     musicSrc: beat.mp3 || beat.wav,
-                    cover: beat.cover,
+                    cover: beat.cover150,
                     singer: beat.artist
                 })
             }

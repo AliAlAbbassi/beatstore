@@ -13,9 +13,18 @@ const BeatSchema = new mongoose.Schema(
     slug: String,
     bpm: Number,
     key: String,
-    mp3: String,
-    wav: String,
-    stems: String,
+    mp3: {
+      type: String,
+      maxlength: [250, 'ye 250']
+    },
+    wav: {
+      type: String,
+      maxlength: [250, 'ye 250']
+    },
+    stems: {
+      type: String,
+      maxlength: [250, 'ye 250']
+    },
     beatTagsSEO: {
       type: String,
       default: 'freestyle rap beat type beat'
@@ -35,6 +44,10 @@ const BeatSchema = new mongoose.Schema(
     cover: {
       type: String,
       default: 'no-photo.jpg',
+    },
+    cover150: {
+      type: String,
+      default: 'no-photo.jpg'
     },
     genre: {
       type: Array,

@@ -38,7 +38,7 @@ const BeatHome = ({ auth }) => {
     const [unmountRB, setUnmountRb] = useRecoilState(mountState)
     const { id } = useParams()
     const { isError, data, isLoading } = useQuery([id, URL], fetchBeat)
-    const [isPlaying, setIsPlaying] = useState(false)
+    const [isPlaying, setIsPlaying] = useState(true)
     const [unmount, setMount] = useState(true)
     const [openPhone, setOpenPhone] = useState(false)
     const matches = useMediaQuery('(min-width:1024px)')
@@ -105,7 +105,13 @@ const BeatHome = ({ auth }) => {
 
     const handlePlay = () => {
         setIsPlaying(!isPlaying)
-        audio.play()
+        if (!unmountRB) {
+            setUnmountRb(true)
+            setMount(false)
+            audio.play()
+        } else {
+            audio.play()
+        }
     }
 
     const handleMountState = () => {
@@ -124,7 +130,7 @@ const BeatHome = ({ auth }) => {
             let newList = [{
                 name: data.data.name,
                 singer: data.data.artist,
-                cover: data.data.cover,
+                cover: data.data.cover150,
                 musicSrc: data.data.mp3 || data.data.wav
             }]
             setAudioList(newList)
@@ -190,7 +196,7 @@ const BeatHome = ({ auth }) => {
                         <div className='mt-56'>
                             <img
                                 className='beatcover m-auto object-cover'
-                                src={data.data.cover}
+                                src={data.data.cover150}
                                 alt='beat cover'
                             />
                             {!isPlaying && (
@@ -334,7 +340,7 @@ const BeatHome = ({ auth }) => {
                                 >
                                     <div>
                                         <div className='d-flex justify-content-center'>
-                                            <img src={data.data.cover} className='beatCoverPhone' alt='beat cover'></img>
+                                            <img src={data.data.cover150} className='beatCoverPhone' alt='beat cover'></img>
                                             <div style={{ marginTop: '0px' }}>
                                                 <h2 className='beatNamePhone'>{data.data.name}</h2>
                                                 <div className='d-flex justify-content-start'>
@@ -449,7 +455,7 @@ const BeatHome = ({ auth }) => {
                     <div className='flex justify-center'>
                         <img
                             className='beatcover object-cover'
-                            src={data.data.cover}
+                            src={data.data.cover150}
                             alt='beat cover'
                         />
                         <div>
@@ -636,7 +642,7 @@ const BeatHome = ({ auth }) => {
 
                         <ModalBody>
                             <div className='d-flex justify-content-start hidden lg:block'>
-                                <img src={data.data.cover} className='imageCrop' alt='beat cover'></img>
+                                <img src={data.data.cover150} className='imageCrop' alt='beat cover'></img>
                                 <div style={{ marginTop: '0px' }}>
                                     <h2 className='beatName'>{data.data.name}</h2>
                                     <div className='d-flex justify-content-start'>
@@ -741,7 +747,7 @@ const RelatedBeats = () => {
     return (
         <div>
             {data && (
-                <Store beats={data.data} status={status} error={error} />
+                <Store beats={data.data} status={status} error={error} autoPlayState={false} />
             )}
         </div>
     )

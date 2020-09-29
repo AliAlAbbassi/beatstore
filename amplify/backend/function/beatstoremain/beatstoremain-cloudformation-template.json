@@ -69,7 +69,7 @@
         "Timeout": "25",
         "Code": {
           "S3Bucket": "amplify-beatstore-prod-175044-deployment",
-          "S3Key": "amplify-builds/beatstoremain-374f4b6132483930376a-build.zip"
+          "S3Key": "amplify-builds/beatstoremain-55317952576e6d585a4a-build.zip"
         }
       }
     },
