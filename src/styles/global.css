@@ -28,9 +28,6 @@ body {
   
 
   @media only screen and (max-width: 1024px) {
-    .home {
-      margin-right: -190px;
-    }
     .trackSearch {
       padding-top: 30px;
       padding-bottom: 30px;
@@ -230,12 +227,6 @@ body {
     } */
 }
 @media screen and (min-width: 1024px) {
-  .social {
-    margin-left: -160px;
-  }
-  .home {
-    margin-right: -700px;
-  }
   .buttonSendOffer {
       background-color: rgb(255, 162, 0);
       margin-top: 10px;

@@ -99,12 +99,12 @@ const Pricing = () => {
 
     return (
         <div className="mb-20 mt-20" style={{ marginBottom: '150px' }}>
-            <h1 className='lg:text-5xl text-6xl mt-20 mb-2 text-center'>PRICING</h1>
-            <div className='hidden lg:block'>
+            <h1 className='lg:text-4xl text-6xl mt-20 mb-2 text-center'>PRICING</h1>
+            <div className='hidden lg:flex lg:justify-center'>
                 <div className="grid grid-cols-5">
-                    <div className="packages" style={{ height: '84%' }}>
-                        <p className='text-4xl mt-2'>MP3 LEASE</p>
-                        <h2 className="text-3xl text-gray">$19.99</h2>
+                    <div className="packages" style={{ height: '90%' }}>
+                        <p className='text-3xl mt-2 text-center'>MP3</p>
+                        <h2 className="text-3xl text-gray text-center mt-1">$19.99</h2>
                         <ul className="text-left mt-3">
                             <li className="mt-2">-Standrad MP3 Lease</li>
                             <li className='mt-2'>-2,000 Unit Cap</li>
@@ -115,9 +115,9 @@ const Pricing = () => {
                             READ LICENSE
       </button>
                     </div>
-                    <div className="packages" style={{ height: '80%' }}>
-                        <h1 className='text-4xl mt-2'>WAV LEASE</h1>
-                        <h2 className="text-3xl text-gray">$29.99</h2>
+                    <div className="packages" style={{ height: '90%' }}>
+                        <p className='text-3xl text-center mt-2'>WAV</p>
+                        <h2 className="text-3xl text-gray text-center mt-1">$29.99</h2>
                         <ul className="text-left mt-3">
                             <li className="mt-2">-High Quality WAV Lease</li>
                             <li className='mt-2'>-5,000 Unit Cap</li>
@@ -129,8 +129,8 @@ const Pricing = () => {
       </button>
                     </div>
                     <div className="packages" style={{ height: '90%' }}>
-                        <h1 className='text-4xl mt-2'>TRACKOUT LEASE</h1>
-                        <h2 className="text-3xl text-gray">$75</h2>
+                        <p className='text-3xl mt-2 text-center'>TRACKOUT</p>
+                        <h2 className="text-3xl text-gray text-center mt-1">$75</h2>
                         <ul className="text-left mt-3">
                             <li className="mt-2">-Lease with Trackouts / Stems</li>
                             <li className='mt-2'>-7,000 Unit Cap</li>
@@ -142,8 +142,8 @@ const Pricing = () => {
       </button>
                     </div>
                     <div className="packages" style={{ height: '90%' }}>
-                        <h1 className='text-4xl mt-2'>UNLIMITED LEASE</h1>
-                        <h2 className="text-3xl text-gray">$99.99</h2>
+                        <p className='text-3xl mt-2 text-center'>UNLIMITED</p>
+                        <h2 className="text-3xl text-gray text-center mt-1">$99.99</h2>
                         <ul className="text-left mt-3">
                             <li className="mt-2">-Unlimited Unit Cap</li>
                             <li className='mt-2'>-Unlimited Commercial Use</li>
@@ -154,10 +154,10 @@ const Pricing = () => {
                             READ LICENSE
       </button>
                     </div>
-                    <div className="packages" style={{ height: '55%' }}>
-                        <h1 className='text-4xl mt-2'>Exclusive</h1>
-                        <h2 className="text-3xl text-gray">MAKE AN OFFER</h2>
-                        <ul className="text-left mt-3">
+                    <div className="packages" style={{ height: '90%' }}>
+                        <p className='text-3xl mt-2 text-center'>Exclusive</p>
+                        <h2 className="text-3xl text-gray text-center mt-1">MAKE AN OFFER</h2>
+                        <ul className="text-left mt-3" style={{ marginBottom: '95px' }}>
                             <li className="mt-2">Exclusive Rights</li>
                         </ul>
                         <button className="button button3" onClick={handleOpenExclusive} style={{ color: 'black', fontSize: '20px' }}>
