@@ -7,7 +7,7 @@ import { clearErrors } from '../actions/errorActions'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 
-const Login = ({ auth, error, login, clearErrors }) => {
+const Login = ({ auth, error, clearErrors, login }) => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [msg, setMsg] = useState(null)

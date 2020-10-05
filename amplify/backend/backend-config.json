@@ -28,5 +28,6 @@
       "service": "amplifyhosting",
       "type": "cicd"
     }
-  }
+  },
+  "auth": {}
 }

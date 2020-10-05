@@ -20,9 +20,7 @@ import MakeAnOffer from './MakeAnOffer'
 import Pricing from './Pricing'
 import ContactMe from './ContactMe'
 import BeatHome from './BeatHome'
-import awsExports from '../aws-exports'
-import Amplify from 'aws-amplify'
-
+import awsexports from '../aws-exports'
 
 const App = () => {
     useEffect(() => {
