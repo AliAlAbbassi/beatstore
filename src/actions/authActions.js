@@ -42,7 +42,9 @@ export const register = ({ name, email, password }) => dispatch => {
     // Headers
     const config = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*"
         }
     }
 
@@ -85,7 +87,9 @@ export const login = ({ email, password }) => dispatch => {
     // Headers
     const config = {
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*"
         }
     }
 
@@ -215,7 +219,9 @@ export const tokenConfig = getState => {
     // headers
     const config = {
         headers: {
-            'Content-type': 'application/json'
+            'Content-type': 'application/json',
+            "Access-Control-Allow-Credentials": true,
+            "Access-Control-Allow-Origin": "*"
         }
     }
 
