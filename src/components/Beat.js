@@ -173,7 +173,7 @@ const Beat = ({ beat, auth }) => {
 
                     <ModalBody>
                         <div className='d-flex justify-content-start hidden lg:block'>
-                            <img src={beat.cover} className='imageCrop' alt='beat cover'></img>
+                            <img src={beat.cover150} className='imageCrop' alt='beat cover'></img>
                             <div style={{ marginTop: '0px' }}>
                                 <h2 className='beatName'>{beat.name}</h2>
                                 <div className='d-flex justify-content-start'>
@@ -278,7 +278,7 @@ const Beat = ({ beat, auth }) => {
                     >
                         <div>
                             <div className='d-flex justify-content-center'>
-                                <img src={beat.cover} className='beatCoverPhone' alt='beat cover'></img>
+                                <img src={beat.cover320} className='beatCoverPhone' alt='beat cover'></img>
                                 <div style={{ marginTop: '0px' }}>
                                     <h2 className='beatNamePhone'>{beat.name}</h2>
                                     <div className='d-flex justify-content-start'>

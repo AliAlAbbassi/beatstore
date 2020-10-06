@@ -196,7 +196,7 @@ const BeatHome = ({ auth }) => {
                         <div className='mt-56'>
                             <img
                                 className='beatcover m-auto object-cover'
-                                src={data.data.cover150}
+                                src={data.data.cover320}
                                 alt='beat cover'
                             />
                             {!isPlaying && (
@@ -340,7 +340,7 @@ const BeatHome = ({ auth }) => {
                                 >
                                     <div>
                                         <div className='d-flex justify-content-center'>
-                                            <img src={data.data.cover150} className='beatCoverPhone' alt='beat cover'></img>
+                                            <img src={data.data.cover320} className='beatCoverPhone' alt='beat cover'></img>
                                             <div style={{ marginTop: '0px' }}>
                                                 <h2 className='beatNamePhone'>{data.data.name}</h2>
                                                 <div className='d-flex justify-content-start'>

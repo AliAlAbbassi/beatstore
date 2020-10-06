@@ -41,11 +41,15 @@ const BeatSchema = new mongoose.Schema(
       type: mongoose.Schema.ObjectId,
       ref: 'User',
     },
-    cover: {
-      type: String,
-      default: 'no-photo.jpg',
-    },
     cover150: {
+      type: String,
+      default: 'no-photo.jpg'
+    },
+    cover320: {
+      type: String,
+      default: 'no-photo.jpg'
+    },
+    cover60: {
       type: String,
       default: 'no-photo.jpg'
     },
