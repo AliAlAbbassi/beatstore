@@ -54,7 +54,7 @@ const CartBeat = ({ beat, auth }) => {
             <div className='text-white grid grid-cols-1 justify-between'>
                 <div className='mt-2 grid grid-cols-2 justify-between'>
                     <div className='flex'>
-                        <img src={beat.cover} className='lg:h-16 lg:w-16 h-32 w-32 object-cover' alt='beat cover' />
+                        <img src={beat.cover60} className='lg:h-16 lg:w-16 h-32 w-32 object-cover' alt='beat cover' />
                         <p className='beatNameCartBeatSD lg:ml-2 lg:mt-3 text-4xl lg:text-2xl ml-3'>{beat.name}</p>
                     </div>
                     <div className='mt-3 flex lg:ml-0'>

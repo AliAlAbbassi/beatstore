@@ -44,7 +44,7 @@ const CartModel = ({ beat, auth }) => {
     return (
         <div>
             <div className='grid grid-cols-3'>
-                <img src={beat.cover} className='beatCoverCartModel lg:w-10 lg:object-cover lg:rounded' alt='cover' />
+                <img src={beat.cover60} className='beatCoverCartModel lg:w-10 lg:object-cover lg:rounded' alt='cover' />
                 <div className='beatNameCartModel text-white text-left'>{beat.name}</div>
                 <div>
                     <svg onClick={() => removeItem()} className='whiteCrossWhiteModel' xmlns="http://www.w3.org/2000/svg" width="512.001" height="512" viewBox="0 0 512.001 512">
