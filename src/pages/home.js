@@ -62,11 +62,12 @@ const Home = ({ auth }) => {
             </section>
             <div className='hardestProducer'>
                 <h1 className='text-5xl text-left mb-3'>CUTHLEHOOP BEATS</h1>
-                <p className='text-gray-300 text-xl ml-1'>Hardest hiphop producer in the game. Also, likes samurai and anime lol</p>
+                <p className='text-gray-300 text-xl ml-1'>Hardest hiphop producer in the game.</p>
             </div>
-            <img alt='background' src='/samurai bg.svg' className='homePage' />
+            <img alt='background' src='/Pikachu Unmasked 500x500.png' className='pikachuUnmasked' />
+            {/* <img alt='background' src='/Unmasked 500x500.png' className='pikachuUnmasked' /> */}
             <div className='storeContainer'>
-                <h1 style={{ color: 'white' }} className=' text-6xl lg:text-3xl font-semibold font-body text-center mt-20 lg:mt-16'>BEATS</h1>
+                <h1 style={{ color: 'white' }} className=' text-6xl lg:text-3xl font-semibold font-body text-center mt-20 lg:mt-40'>BEATS</h1>
                 {beats && (
                     <Store beats={beats} status={status} isLoading={isLoading} />
                 )}

@@ -80,6 +80,7 @@ p
 }
     .cartContainer {
     margin-top: 90px;
+    margin-bottom: 50px;
     display: grid;
     justify-content: center;
     margin-right: auto;

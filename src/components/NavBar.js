@@ -35,7 +35,7 @@ const NavBar = ({ auth }) => {
 
     return (
         <div>
-            <nav style={{ backgroundColor: 'rgb(53, 47, 53)' }} className="navBAR">
+            <nav style={{ backgroundColor: '#191919' }} className="navBAR">
                 <div className="flex flex-no-shrink items-stretch h-12 lg:h-0 justify-between" >
                     <div
                         style={{ marginTop: '-25px' }}

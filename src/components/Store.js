@@ -12,7 +12,7 @@ const overrideLg = css`
   display: block;
   margin-top: 100px;
   margin-left: 670px;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
 `;
 
 const override = css`
@@ -99,7 +99,7 @@ const Store = ({ auth, beats, status, error, isLoading, autoPlayState }) => {
             )}
             {status === 'success' && (
                 <div>
-                    <div className='container mx-auto justify-center mt-5 mb-3 w-20'>
+                    <div className='container mx-auto justify-center mt-4 mb-3 w-20'>
                         <div className='lg:pr-20 lg:pl-0 pl-16'>
                             <p
                                 className='titleStyle text-white text-bold lg:mr-2 text-4xl lg:text-xl'
