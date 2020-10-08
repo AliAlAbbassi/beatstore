@@ -10,13 +10,13 @@
 }
 
 .addToCartBtn {
-    background-color: rgb(255, 162, 0);
+    background: #ff9500;
     width: 360px;
     height: 100px;
 }
 
 .download {
-    background-color: rgb(255, 162, 0);
+    background: #ff9500;
     width: 360px;
     height: 100px;
     font-size: 53px;
@@ -74,7 +74,7 @@
         margin-left: 27px;
     }
     .addToCartBtn {
-        background-color: rgb(255, 162, 0);
+        background: #ff9500;
         margin-left: 15px;
         margin-top: 10px;
         width: 150px;

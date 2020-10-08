@@ -40,8 +40,8 @@ const Login = ({ auth, error, clearErrors, login }) => {
 
 
     return (
-        <div className="flex justify-center" style={{ marginTop: '150px', color: 'white' }}>
-            <form className='w-3/4'>
+        <div className="flex justify-center mt-64 text-white">
+            <form className='w-4/5'>
                 {msg ? (<Alert variant='danger'>{msg}</Alert>) : null}
                 <div className="form-group">
                     <label className='text-6xl lg:text-3xl' htmlFor="exampleInputEmail1">Email address</label>
@@ -82,7 +82,8 @@ const Login = ({ auth, error, clearErrors, login }) => {
                 </div> */}
                 <button
                     type="submit"
-                    className="btn btn-primary text-4xl lg:text-xl hover:underline"
+                    className="btn text-4xl lg:text-xl hover:underline p-3 mt-10 mr-3 text-black"
+                    style={{ backgroundColor: '#ff9500' }}
                     onClick={(e) => {
                         e.preventDefault()
                         login({ email, password })
@@ -93,7 +94,7 @@ const Login = ({ auth, error, clearErrors, login }) => {
                 >
                     Submit
           </button>
-                <button type="submit" className="btn btn-secondary text-4xl lg:text-xl" style={{ marginLeft: '10px' }}>
+                <button type="submit" className="btn btn-secondary text-4xl lg:text-xl p-3 mt-10 text-black">
                     <Link to='/register' className='hover:text-white'>
                         Register
                     </Link>

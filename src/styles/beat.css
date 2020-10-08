@@ -94,7 +94,7 @@
     height: 90px;
     width: 150px;
     margin-top: 7px;
-    background-color: rgb(255, 162, 0);
+    background: #ff9500;
     margin-left: -10px;
 }
     .beatName {
@@ -152,7 +152,7 @@
     height: 50px;
     width: 100px;
     margin-top: 10px;
-    background-color: rgb(255, 162, 0);
+    background: #ff9500;
 }
     .beatName {
     margin-left: 20px;

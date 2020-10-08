@@ -26,13 +26,13 @@ body {
   color: #f4f4f4;
 }
 .button3 {
-  background-color: rgb(255, 162, 0); 
+  background: #ff9500; 
 }
   }
 
   @media only screen and (max-width: 1024px) {
 .button3 {
-  background-color: rgb(255, 162, 0); 
+  background: #ff9500; 
   width: 400px;
   height: 100px;
   margin-top: 40px;
