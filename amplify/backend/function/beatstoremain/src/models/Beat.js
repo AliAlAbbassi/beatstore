@@ -13,11 +13,19 @@ const BeatSchema = new mongoose.Schema(
     slug: String,
     bpm: Number,
     key: String,
-    mp3: {
+    mp3WTags: {
       type: String,
       maxlength: [250, 'ye 250']
     },
-    wav: {
+    mp3WoutTags: {
+      type: String,
+      maxlength: [250, 'ye 250']
+    },
+    wavWtags: {
+      type: String,
+      maxlength: [250, 'ye 250']
+    },
+    wavWouttags: {
       type: String,
       maxlength: [250, 'ye 250']
     },
