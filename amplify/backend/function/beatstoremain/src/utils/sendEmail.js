@@ -3,6 +3,9 @@ aws.config.loadFromPath('../.aws/config.json')
 
 const sendEmail = (options) => {
   const sender = `Sender Name ${options.senderEmail}`
+  const recipient = options.emailRequired
+  const body_text = options.messageRequired
+  const body_html = options.html
   //   const configuration_set = "ConfigSet"
 
   const charset = 'UTF-8'
@@ -12,20 +15,20 @@ const sendEmail = (options) => {
   var params = {
     Source: sender,
     Destination: {
-      ToAddresses: [options.recipient],
+      ToAddresses: [recipient],
     },
     Message: {
       Subject: {
-        Data: options.subject,
+        Data: subject,
         Charset: charset,
       },
       Body: {
         Text: {
-          Data: options.body_text,
+          Data: body_text,
           Charset: charset,
         },
         Html: {
-          Data: options.body_html,
+          Data: body_html,
           Charset: charset,
         },
       },
