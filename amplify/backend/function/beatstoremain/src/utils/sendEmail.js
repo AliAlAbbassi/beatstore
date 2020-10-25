@@ -1,28 +1,43 @@
-const nodemailer = require('nodemailer')
+const aws = require('aws-sdk')
+aws.config.loadFromPath('../.aws/config.json')
 
-// async..await is not allowed in global scope, must use a wrapper
-const sendEmail = async (options) => {
-  // create reusable transporter object using the default SMTP transport
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: process.env.SMTP_PORT,
-    auth: {
-      user: process.env.SMPT_EMAIL,
-      pass: process.env.SMPT_PASSWORD,
+const sendEmail = (options) => {
+  const sender = `Sender Name ${options.senderEmail}`
+  //   const configuration_set = "ConfigSet"
+
+  const charset = 'UTF-8'
+
+  const ses = new aws.SES()
+
+  var params = {
+    Source: sender,
+    Destination: {
+      ToAddresses: [options.recipient],
     },
-  })
-
-  // send mail with defined transport object
-  const message = {
-    from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`, // sender address
-    to: options.email, // list of receivers
-    subject: options.subject, // Subject line
-    text: options.message,
+    Message: {
+      Subject: {
+        Data: options.subject,
+        Charset: charset,
+      },
+      Body: {
+        Text: {
+          Data: options.body_text,
+          Charset: charset,
+        },
+        Html: {
+          Data: options.body_html,
+          Charset: charset,
+        },
+      },
+    },
   }
-
-  const info = await transporter.sendMail(message)
-
-  console.log('Message sent: %s', info.messageId)
+  ses.sendEmail(params, function (err, data) {
+    // If something goes wrong, print an error message.
+    if (err) {
+      console.log(err.message)
+    } else {
+      console.log('Email sent! Message ID: ', data.MessageId)
+    }
+  })
 }
-
 module.exports = sendEmail

@@ -1,6 +1,7 @@
 const ErrorResponse = require('../utils/errorResponse')
 const asyncHandler = require('../middleware/async')
 const User = require('../models/User')
+const sendEmailUtil = require('../utils/sendEmail')
 
 // @desc    Get all users
 // @route   GET /api/v1/auth/users
@@ -53,6 +54,18 @@ exports.updateUser = asyncHandler(async (req, res, next) => {
 // @access  Private/Admin
 exports.deleteUser = asyncHandler(async (req, res, next) => {
   await User.findByIdAndDelete(req.params.id)
+
+  res.status(200).json({
+    success: true,
+    data: {},
+  })
+})
+
+//@desc     send emails
+//@route    POST /auth/users/sendEmail
+//@access   Public
+exports.sendEmail = asyncHandler(async (req, res) => {
+  sendEmailUtil(req.body)
 
   res.status(200).json({
     success: true,

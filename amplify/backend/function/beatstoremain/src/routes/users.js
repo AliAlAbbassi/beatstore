@@ -5,6 +5,7 @@ const {
   CreateUser,
   updateUser,
   deleteUser,
+  sendEmail,
 } = require('../controllers/users')
 
 const User = require('../models/User')
@@ -25,5 +26,6 @@ router.use(authorize('producer'))
 router.route('/').get(advancedResults(User), getUsers).post(CreateUser)
 
 router.route('/:id').get(getUser).put(updateUser).delete(deleteUser)
+router.route('/sendEmail').get(sendEmail)
 
 module.exports = router
